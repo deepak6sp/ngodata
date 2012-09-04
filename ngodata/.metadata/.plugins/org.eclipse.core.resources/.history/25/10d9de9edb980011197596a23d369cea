@@ -1,0 +1,519 @@
+<?php
+    //require_once ('../classes/NGODataSession.class.php');
+	//require_once '../classes/NGODataSecurity.class.php';
+	//require_once '../database/NGODataDB.class.php';
+	//require_once '../database/NGOMetadataDB.class.php';
+	//require_once '../classes/BCrypt.class.php';
+	//require_once ('../classes/NGOMetadatum.class.php');
+	//require_once '../factories/NGODataDBFactory.class.php';
+	//require_once '../database/NGODataSQLGenerator.class.php';
+	//require_once '../containers/NGODataContainer.class.php';
+	//require_once '../database/NGODataDB.class.php';
+	//require_once '../model/RegistrationDAO.class.php';
+	//require_once '../model/RegistrationFactory.class.php';
+	//require_once '../model/RegistrationVO.class.php';
+	//require_once '../model/RegistrationQO.class.php';
+	//require_once '../display/RegistrationDisplay.class.php';
+	//require_once '../containers/TestContainer.class.php';
+	
+	require_once '../classes/NGOData.class.php';
+	
+	$n = new NGOData();
+	print $n->getPath('');
+	
+	
+	
+	//if (!isset($_SESSION)) session_start();
+	//$tc = new TestContainer();
+	// uncomment next line to load data to the database...
+	//$tc->loadTestLookupData();
+	//$tc->testDisplay();
+	
+	
+	/*
+	// ####  TESTING DISPLAY  #### //
+	$rvo = new RegistrationVO();
+	$rqo = new RegistrationQO();
+	$rdao = new RegistrationDAO();
+	$data[] = array('id'=>15);
+	$data[] = array('entity_name'=>'NGOData');
+	$data[] = array('business_registration_code'=>'27883382340');
+	$data[] = array('email'=>'sa_cooke@me.com');
+	$data[] = array('title_id'=>'1');
+	$data[] = array('firstname'=>'Steve');
+	$data[] = array('middlename'=>'');
+	$data[] = array('surname'=>'Cooke');
+	$data[] = array('registration_request_date'=>time());
+	$data[] = array('registration_number'=>'NGODR00001');
+	
+	$rvo->setData($data);
+	$rvo->setQueryObject($rqo);
+	$rdao->setData($rvo);
+	
+	$rd = new RegistrationDisplay();
+	echo $rd->displayReview($rdao->getData());
+	echo $rd->displayNew();
+	echo $rd->displayUpdate($rdao->getData());
+	*/
+	
+	
+	
+	//$dbc = new NGODataContainer();
+	//$db = $dbc->getNGODataConnection();
+	// set up
+	
+	
+	
+	//$fields = array('ngodata_username', 'ngodata_userpass', 'ngodata_dbname', 'ngodata_host');
+	//$dbtype = new NGODataDBType();
+	//$dbtype->setFields($fields);
+	//$dbtype->setDBType('ngodata');
+	
+	//$db = new NGODataDB($dbtype);
+	//print '<pre>';
+	//print_r($db);
+	//print '</pre>';
+	//$data[] = array('id'=>15);
+	//$data[] = array('firstname'=>'Steve');
+	//$data[] = array('surname'=>'Cooke');
+	//$data[] = array('password'=>'12.56cvd'); 
+	//print 'User data: <pre>';
+	//print_r($data);
+	//print '</pre>';
+	
+	//$uf = new UserFactory();
+	
+	
+	/*
+	print '<pre>';
+	print 'About to call createUser($data) from test.php...';
+	print '</pre>';
+	$dao1 = $uf->createUser($data);
+	print '<pre>Here is the created object - ';
+	print_r($dao1);// 'About to call createUser($data) from test.php...';
+	print '</pre>';
+	
+	
+	
+	
+	print '<pre>';
+	print 'About to call createUserById() from test.php...';
+	print '</pre>';
+	$dao2 = $uf->createUserById(15);
+	print '<pre>Here is the created object - ';
+	print_r($dao2);// 'About to call createUser($data) from test.php...';
+	print '</pre>';
+	
+	
+	
+	print '<pre>';
+	print 'About to call doSelect() on the second object...';
+	print '</pre>';
+	$dao2->doSelect();
+	
+	
+	print '<pre>';
+	print 'About to call save() on the first object...';
+	print '</pre>';
+	
+	$result = $dao1->save();
+	//print '<pre>';
+	//print 'this is two...';
+	//print '</pre>';
+	//print 'This is the result: '.$result;
+	
+	//print '<pre>';
+	//print_r($_SESSION);
+	//print '</pre>';
+	
+	session_destroy();
+	/*
+	$u= new User($data);
+	$udao = new UserDAO();
+	try {
+	if (!$udao->setData($u)) {
+		throw new Exception('Error:');
+	} 
+	} catch (Exception $e) {
+		print_r($e);
+	}
+	
+	$sqlGen = new NGODataSQLGenerator();
+	// pass the object to be inserted to the sql generator
+	//$sql = $sqlGen->createInsertStatement($tableName, $data)($udao);
+	$sql = $sqlGen->createInsertStatement($u);
+	
+	print $sql;
+	// now try inserting data!
+	$db->doInsert($sql);
+	*/
+	
+	/*
+	print '<pre>';
+	print_r($u->getData());
+	print '</pre>';
+	print_r($_SESSION);
+	*/
+	
+	
+	//$data = $db->select($sql);
+	
+	/*
+	$a = array('id'=>5, 'id'=>6, 'id'=>7);
+	$b = array('id'=>array(5,6,7), 'field'=>array('dbhost','dbusername'));
+	$c = array('field'=>array('dbhost','dbusername'));
+	print '<pre>';
+	//print_r($a);
+	//print_r($b);
+	print_r($c);
+	print '</pre>';
+	
+	$f = array('id','password','username');
+	$w = array('id'=>1, 'password'=>'test');
+	
+	$a = new NGODataSQLGenerator();
+	$sql = $a->createSelectStatement("test", NULL, $c);
+	print '<pre>';
+	print $sql;
+	print '</pre>';
+	
+	$sql = $a->createSelectStatement("test", NULL, $w);
+	print '<pre>';
+	print $sql;
+	print '</pre>';
+	
+	$sql = $a->createSelectStatement("test", $f, NULL);
+	print '<pre>';
+	print $sql;
+	print '</pre>';
+	
+	$sql = $a->createSelectStatement("test", NULL, NULL);
+	print $sql;
+	*/
+	
+	
+	/*
+	// testing the sql preparation stuff
+	$a = new NGODataSQLGenerator();
+	$f = array('id','password','username');
+	$w = array('id'=>1, 'password'=>'test');
+	//$d = array();
+	//$d[] = array('firstname'=>'Steve');
+	//$d[] = array('surname'=>'Cooke');
+	//$d[] = array('number'=>'0403 832 208');
+	 */
+	
+	
+	//print_r($w);
+	//$sql = $a->createSelectStatement("test", $f, $w);
+	//print $sql;
+	//print $a->createInsertStatement("test", NULL, NULL);
+	/*
+	$result = $a->createUpdateStatement("test",$d, $w);
+	if (!isset($result)) print 'update returned NULL...';
+	print $result;
+	*/
+	
+	/*
+	$db = NGODataDB::getInstance();
+	$u = new User();
+	$u->loadObjectById(69, $db);
+	*/
+	
+	//$db = NGODataDB::getInstance();
+	//print '<pre>';
+	//print_r($db);
+	//print '</pre>';
+	//$data = $db->select($sql);
+	/*
+	[variable] => ngodata_userpass
+                    [value] => n%g#o!_d4t4
+    [variable] => ngodata_username
+                    [value] => ngodata
+    [variable] => ngodata_dbname
+                    [value] => ngodata
+                    [is_encrypted] => 0
+	[variable] => ngodata_host
+                    [value] => localhost
+    */
+	/* 
+	$dbhost = "localhost";
+	$dbusername = "ngodata";
+	//$dbuserpass = "n%g#o!_d4t4";
+	$dbuserpass = "tLp_1039";
+    $db2 = mysql_connect($dbhost, $dbusername, $dbuserpass);
+    */
+	//print_r($db);
+	
+	
+	
+	/******************************
+	// ###  use for client code...possibly include in base class that client code extends
+	function myErrorHandler($errno, $errstr, $errfile, $errline) {
+		if ( E_RECOVERABLE_ERROR===$errno ) {
+			echo "Caught catchable fatal error\n";
+			throw new ErrorException($errstr, $errno, 0, $errfile, $errline);
+			// return true;
+		}
+		return false;
+	}
+	set_error_handler('myErrorHandler');
+	
+	
+	function test(array $a){}
+	try {
+		
+		test('1');
+		throw new ErrorException('Caught error...');
+	} catch (ErrorException $ee) {
+		echo '<pre>';
+		print_r($ee);
+		echo '</pre>';
+	}
+	******************************/
+	
+	
+	/******************************
+	$a = new NGODataDBFactory();
+	$a->testArray();
+	******************************/
+	
+	/******************************/
+	//$db = NGODataDB::getInstance();
+	
+	//print_r($db);
+	/******************************/
+	
+	//session_start();
+	//session_regenerate_id();
+	/*
+	// test that mysql_real_escape_string() works...
+	$db = NGOMetadataDB::getInstance();
+	$p = "   ='' stind   ";
+	
+	echo $db->sanitizeString($p)
+	*/
+	
+	//$s = NGODataSecurity::getInstance();
+	
+	// Testing BCrypt...
+	// only do below ONCE!!
+	/*
+	 
+	$s = new BCrypt(13);
+	$password = 'n%g#o!_d4t4';
+	$d = array('variable' => 'ngodata_passhash',
+		'value' => $s->hash($password),
+		'isEncrypted' => 0
+	);
+	$m = new NGOMetadatum();
+	$m->setData($d);
+	$m->create();
+	
+	*/
+	
+	/*
+	
+	$s = new BCrypt(13);
+	$password = 'n%g#o!_d4t4';
+	//$password2 = 'The_god.delusion2012';
+	
+	// get the hash from the metadata database
+	$m = NGOMetadataDB::getInstance();
+	$sql = 'select value from metadata where variable = \'ngodata_passhash\'';
+	$data = $m->select($sql);
+	
+	echo '<pre>';
+	print_r($data);
+	echo '</pre>';
+	$hash = $data[0]['value'];
+	//$hash = $s->hash($password);
+	
+	
+	echo 'Password is: '.$password.', and the hash is: '.$hash;
+	//if ($s->verify($password, $hash)) {
+	if ($s->verify($password, $hash)) {
+		echo 'Yep - password good.  You may enter.';
+	} else {
+		echo 'Nope - password crap. This has been logged - YOU CANNOT NOT ENTER!';
+	}
+
+	*/
+	
+	// test for hashing
+	//$hash = $s->generateHash(0, 'thegoddelusion2011');
+	//print '</ br>The hash: ';
+	//print_r($s->retrieveHashAndSalt($hash));
+	
+	//$string = 'thegoddelusion2011';
+	//printf("<br />Original string: %s\n", $string);
+	//printf("<br />MD5 hash: %s\n", md5($string));
+	//printf("<br />SHA-1 hash: %s\n", sha1($string));
+	
+	/**
+	// this is the test for encryption/decryption
+	$text = "Cooke";
+	$htext = htmlentities($text, ENT_QUOTES);
+	echo "Source: $htext<br>";
+	//$et = $s->encrypt('i must go down to the sea again', $text, 256);
+	
+	//print 'Here we are!';
+	
+	$et = $s->encrypt($htext, 256);
+	echo ".... Here is the encrypted text: '".$et."' blah<br>";
+	echo "Length of encrypted text: ".strlen($et)."<br>";
+	//$dt = $s->decrypt('i must go down to the sea again', $et);
+	//print_r($s->errors);
+	$dt = $s->decrypt($et);
+	echo '.... Decrypted text: '.$dt."<br>";
+	//print_r($s->errors);
+	*/
+	
+	/*
+	$d = NGOMetadataDB::getInstance();
+	print_r($d);
+	//session_regenerate_id();
+	$sql = 'select * from metadata';
+	$data = $d->select($sql);
+	print_r($data);
+	
+	foreach ($data as $k=>$v) {
+		foreach ($v as $k2=>$v2) {
+			if ($k2 == '') {
+				
+			}
+		}
+	}
+	//print '.......';
+	//print_r($_SESSION);
+	
+	*/
+	
+	
+	/*
+	$ds = new NGODataSecurity();
+	
+	$enc = $ds->encrypt(NULL,'','I saw the best minds of my generation destroyed by madness, starving hysterical naked, dragging themselves through the negro streets at dawn looking for an angry fix');
+	
+	print $enc;
+	print $ds->decrypt('', NULL, $enc);
+	*/
+	
+	
+	
+	//this is to bootstrap the application - need the global salt (or is it pepper!)
+	
+	//print_r($_SESSION);
+	/*
+    new NGODataSession();
+    session_start();
+	
+	$q = new NGODataSecurity();
+	
+	$globPepper = 'I must go down to the sea again';
+	$text = 'tlp_3339'.$globPepper;
+	$hash = hash('sha512', $text);
+	
+	$q->retrieveHashAndSalt(NULL);
+	print_r($_SESSION);
+	//$q->generateHash(0,'1234');
+	
+	//print_r($_SESSION);
+	*/
+	
+	
+	
+	
+	/*
+	$globPepper = 'I must go down to the sea again';
+	$text = 'tlp_3339'.$globPepper;
+	$hash = hash('sha512', $text);
+	
+	print $hash;
+	print "\n\r Length of string: ".strlen($hash);
+	 */
+	 
+	 
+	 
+	 
+	 /* 
+	$globalSalt = 'I must go down to the sea again';
+	$entSalt = '';
+	$salt = hash('sha512', uniqid(mt_rand(), true) . $globalSalt . strtolower($entSalt));
+	
+	print $salt;
+	
+	$hash = $salt.$text;
+	for ($i=0; $i<100; $i++) {
+		$hash = hash('sha512', $hash);
+	}
+	$hash = $salt.$hash;
+	print $hash;
+	*/
+	
+	
+	
+	
+	
+	/*
+	$nKey = "The best laid schemes o' Mice an' Men Gang aft agley";
+	$eKey = 'shoreline';
+	$term = 'Nine Inch Nails';
+	$p = '<html<head></head><body><p>Test encrypt...</p>';
+	$p .= '<p>term: '.$term.'</p>';
+	//$p .= '<p>Entity id: '.$_SESSION['entity_id'].'</p>';
+	$eterm = $q->encrypt($nKey, $eKey, $term);
+	if (!$eterm) ;
+	
+	$dterm = $q->decrypt($nKey, $eKey, $eterm);
+	if (!$dterm) ;
+	
+	$p .= '<p>encrypted term: '.$eterm.'</p>';
+	$p .= '<p>decrypted term: '.$dterm.'</p>';
+	//$p .= '<p>encrypted term: '.$eterm.'</p>';
+	
+	print_r($q->errors);
+	$p .= '</body></html>';
+	*/
+	
+	
+	
+	
+	 
+	/*
+	$file_handle = fopen("../files/salt.txt", "r");
+while (!feof($file_handle)) {
+   $line = fgets($file_handle);
+   echo $line;
+}
+fclose($file_handle);
+	*/
+	
+	
+	
+	
+	
+	
+	/*
+	$_SESSION['entity_id'] = '14';
+    //print 'Phrase: skool is for whimps';
+    $p = '<html<head></head><body><p>Test sessions...</p>';
+	$p .= '<p>session id: '.session_id().'</p>';
+	$p .= '<p>Entity id: '.$_SESSION['entity_id'].'</p>';
+	session_regenerate_id();
+	$p .= '<p>session id: '.session_id().'</p>';
+	$p .= '<p>Entity id: '.$_SESSION['entity_id'].'</p>';
+	
+	unset($_SESSION['entity_id']);
+	
+	if (isset($_SESSION['entity_id'])) {
+		$p .= '<p>Entity id: '.$_SESSION['entity_id'].'</p>';
+	} else {
+		$p .= '<p>Entity id is no longer set...</p>';
+	}
+	$p .= '</body></html>';
+	//print hash('sha512', $p);
+	*/
+	
+	//echo $p;
+?>

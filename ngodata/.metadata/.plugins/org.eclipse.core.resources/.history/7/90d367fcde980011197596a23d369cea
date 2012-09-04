@@ -1,0 +1,31 @@
+<?php
+//require_once '/ngodata/classes/NGOData.class.php';
+require_once dirname(__FILE__).'ngodata/classes/NGOData.class.php';
+//require_once ('');
+
+// what is displayed for the public
+
+
+// should be in database
+$para1 = 'Welcome to the <b>new</b> Tasmanian designed, owned, and operated Hosted Data Management site.';
+$para2 = 'We are a company of professional database programmers with over twenty years experience in government and the private sector.  We provide you with peace of mind in the knowledge that your data is always accessable and secure.  This site is designed with not-for-profit organisations in mind, but the services offered are suited to any small business looking for professional, secure, and affordable data storage and management.';
+$para3 = 'Please explore the site, and contact us with any questions Hi there!.';
+
+
+$html = '';
+$html .= NGOData::displayPageStart();
+//$html .= NGOData::displayPageStart('../Private/css/');
+$html .= NGOData::displayMessage();
+
+$html .= NGOData::startIndent();
+$html .= NGOData::header3('Welcome!');
+
+$html .= NGOData::para($para1);
+$html .= NGOData::para($para2);
+$html .= NGOData::para($para3);
+$html .= NGOData::closeProperty();
+$html .= '<div><a href="#">Testing links...</a>';
+$html .= NGOData::displayPageEnd();
+
+print $html;
+?>

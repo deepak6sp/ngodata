@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>App Wireframe</title>
+<link href="oneColFixCtr.css" rel="stylesheet" type="text/css" />
+<link href="superfish.css" rel="stylesheet" type="text/css"  />
+<script type="text/javascript" src="functions.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="superfish.js"></script>
+<script type="text/javascript">
+jQuery(function(){
+	jQuery('ul.sf-menu').superfish();
+});
+</script>
+</head>
+
+<body>
+<div class="container">
+  <div class=header> 
+    <!-- Logo Goes here --> 
+    Logo 
+    <!-- End Logo --> 
+  </div>
+  <div class=menu>
+    <ul class="sf-menu">
+      <!-- Add menu items by adding <li> tags -->
+      
+      <li><a href="#">Home</a> 
+        <!-- Start Sub Menu Items -->
+        <ul class="subnav">
+          <li><a href="#">Sub Nav</a></li>
+          <li><a href="#">Sub Nav</a></li>
+        </ul>
+        <!-- End Sub MEnu Item --> 
+      </li>
+      <li><a href="#">About</a>
+        <ul class="subnav">
+          <li><a href="#">Sub Nav</a></li>
+          <li><a href="#">Sub Nav</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Services</a>
+        <ul class="subnav">
+          <li><a href="#">Sub Nav</a></li>
+          <li><a href="#">Sub Nav</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="content"> 
+    
+    <!-- Heading Tags -->
+    <h1>H1 Header</h1>
+    <h2>H2 Header</h2>
+    <h3>H3 Header</h3>
+    
+    <!-- Basic Paragraph - use P instead of <BR>, <BR> is no longer considered proper formatting -->
+    <p>Paragraph</p>
+    <p> 
+      <!-- Error Message Code -->
+    
+    </p><div class=error>Error Message</div>
+    
+    <!-- Warning MEssage Code -->
+    <div class=warning>Warning Message</div>
+    
+    <!-- info message -->
+    <div class=information>Information Box</div>
+    <p></p>
+    <div class=indent> Layout options, use for making pages have multiple columns (not the same thing as using tables, tables should only be used for well, tables, not for layout. So use these for layout, tables for tables. 
+      <!-- 2,3 & 4 column layouts, use these in place of tables -->
+      <p>
+      
+      </p><div class=twocol>Col 1</div>
+      <div class=twocol>Col 2</div>
+      <p></p>
+      <p class=clear>
+      
+      </p><div class=threecol>Col 1</div>
+      <div class=threecol>Col 2</div>
+      <div class=threecol>Col 3</div>
+      <p></p>
+      <p class=clear>
+      
+      </p><div class=fourcol>Col 1</div>
+      <div class=fourcol>Col 2</div>
+      <div class=fourcol>Col 3</div>
+      <div class=fourcol>Col 4</div>
+      <p></p>
+      <p class=clear></p>
+      
+      <!-- more layout options , useful if you want a page with a side bar, on left or right side -->
+      <div class=twothirds>Two Thirds</div>
+      <div class=onethird>One Third</div>
+      <div class=clear></div>
+      <div class=onethird>one Thirds</div>
+      <div class=twothirds>Two Third</div>
+      <div class=clear></div>
+    </div>
+    <p> Ordered List 
+      <!-- Ordered List -->
+    
+    </p><ol>
+      <li>First</li>
+      <li>Second</li>
+      <li>third</li>
+    </ol>
+    <p></p>
+    <p> Unordered List 
+      <!-- unordered list -->
+    
+    </p><ul>
+      <li>First</li>
+      <li>Second</li>
+      <li>third</li>
+    </ul>
+    <p></p>
+    <table cellpadding="0" cellspacing="0" class="table-a">
+      <thead>
+        <tr class="row" id="titles">
+          <th class="left" valign="top"> <h3>Yes, its really a table</h3>
+          </th>
+          <th class="right"> <h3>Product Name A</h3>
+          </th>
+          <th class="right" valign="top"> <h3>Product Name B</h3>
+          </th>
+          <th class="right" valign="top"> <h3>Product Name C</h3>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row2">
+          <td class="lefttitle">Sample feature here</td>
+          <td align="center" class="right">5</td>
+          <td align="center" class="right">15</td>
+          <td align="center" class="right">Unlimited</td>
+        </tr>
+        <tr class="row">
+          <td class="lefttitle">Sample feature here</td>
+          <td align="center" class="right">25</td>
+          <td align="center" class="right">40</td>
+          <td align="center" class="right">Unlimited</td>
+        </tr>
+        <tr class="row2">
+          <td class="lefttitle">Sample feature here</td>
+          <td align="center" class="right">None</td>
+          <td align="center" class="right">Available</td>
+          <td align="center" class="right">Complete</td>
+        </tr>
+        <tr class="row">
+          <td class="lefttitle">Sample feature here</td>
+          <td align="center" class="right">Standard</td>
+          <td align="center" class="right">Medium</td>
+          <td align="center" class="right">Professional</td>
+        </tr>
+        <tr class="row2">
+          <td class="lefttitle">Sample feature here</td>
+          <td align="center" class="right">Value</td>
+          <td align="center" class="right">Value</td>
+          <td align="center" class="right">Value</td>
+        </tr>
+        <tr class="row">
+          <td class="lefttitle">Sample feature here</td>
+          <td align="center" class="right">Value</td>
+          <td align="center" class="right">Value</td>
+          <td align="center" class="right">Value</td>
+        </tr>
+        <tr class="row2">
+          <td class="lefttitle">Sample feature here</td>
+          <td align="center" class="right">Value</td>
+          <td align="center" class="right">Value</td>
+          <td align="center" class="right">Value</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <p>
+    </p><h3>Forms</h3>
+    
+    <form id=wireframe action="test.html">
+      <p>
+        <label>Username</label>
+        <input type=text />
+        <label>Password</label>
+        <input type=password />
+        </p><p>Remember
+        <input type=checkbox /></p>
+        
+        
+        
+        <div class="btn btn_submit"><a href="#" onClick="submitForm();">Submit Form</a><span></span></div>
+<div class="clear"></div>
+        
+        
+      <p></p>
+</form>
+
+<p></p>
+    
+    
+    
+    <p>More Forms</p>
+    <div class="twocol greenform">
+    
+    <form action=#>
+    <p class=heading>Form heading</p>
+    <p><span>Username</span><input type=text /><span class=mini><input type=radio />
+    Primary</span></p>
+    <p><span>Password</span><input type=password /></p>
+    <p><span>Radio</span><input type=radio /></p>
+    <p><span>Checkbox</span><input type=checkbox /></p>
+    <p><span>Textarea</span><textarea></textarea></p>
+    <p><span>Dropdown List</span>
+    <select>
+    <option value=0>none</option>
+    <option value=0>one</option>
+    </select>
+    </p>
+    <p><span>&nbsp;</span><input type=submit value="Hello there" /></p>
+    </form>
+    </div>
+    
+    
+    <div class=twocol>
+    
+    put another form here
+    </div>
+    <div class=clear></div>
+    <!-- end .content --></div>
+  <!-- end .container --></div>
+<div class=footer>&copy;2011 Bugcafe Web Design</div>
+</body>
+</html>

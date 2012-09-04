@@ -1,0 +1,22 @@
+CREATE the NGO databases
+
+1. Create the metadata base
+	"create database NGOMetaData;"
+
+2. Create a user to use the database:
+	"create user meta@localhost;" (or whatever the host is)
+	//"INSERT INTO user (Host,User,Password) VALUES ('<host>','meta',PASSWORD('n%g#o!_d4t4'));"
+
+3. Set password:
+	"set password for '<username>'@'<host>' = password('<password>');"
+	eg - "Set password for 'meta'@'localhost' = password('password');"
+
+
+4. Grant permissions:
+	"GRANT ALL ON ngometadata.* TO 'meta'@'localhost' IDENTIFIED BY 'n%g#o!_d4t4';"
+
+4a. Delete user:
+	drop user '<username>';
+	FLUSH PRIVILEGES;
+	
+5. Run databaseScripts/CreateMetaDatabase.php

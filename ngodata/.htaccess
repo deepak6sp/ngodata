@@ -1,0 +1,29 @@
+Options -Indexes 
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} !^/ngodata/htdocs/
+RewriteCond %{DOCUMENT_ROOT}/ngodata/%{REQUEST_URI} -f
+RewriteRule .* /app/public/$0 [L]
+
+RewriteCond %{REQUEST_URI} !^/ngodata/architecture/
+RewriteCond %{REQUEST_URI} !^/ngodata/classes/
+RewriteCond %{REQUEST_URI} !^/ngodata/configuration/
+RewriteCond %{REQUEST_URI} !^/ngodata/containers/
+RewriteCond %{REQUEST_URI} !^/ngodata/controllers/
+RewriteCond %{REQUEST_URI} !^/ngodata/database/
+RewriteCond %{REQUEST_URI} !^/ngodata/databaseScripts/
+RewriteCond %{REQUEST_URI} !^/ngodata/display/
+RewriteCond %{REQUEST_URI} !^/ngodata/exceptions/
+RewriteCond %{REQUEST_URI} !^/ngodata/factories/
+RewriteCond %{REQUEST_URI} !^/ngodata/files/
+RewriteCond %{REQUEST_URI} !^/ngodata/interfaces/
+RewriteCond %{REQUEST_URI} !^/ngodata/messages/
+RewriteCond %{REQUEST_URI} !^/ngodata/metadata/
+RewriteCond %{REQUEST_URI} !^/ngodata/model/
+RewriteCond %{REQUEST_URI} !^/ngodata/test/
+RewriteRule ^([^/]+)/(.+\.js)$ /ngodata/objects/$1/behaviours/$2 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* /index.php?url=$0 [L,QSA]
+

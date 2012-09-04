@@ -1,0 +1,431 @@
+@charset "UTF-8";
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #EEEEEE;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+
+ul, ol, dl { 
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 
+	padding-right: 15px;
+	padding-left: 15px; 
+}
+a img { 
+	border: none;
+}
+
+a:link {
+	color: #42413C;
+	text-decoration: underline;
+	/*
+	border: 1px solid #004276;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 2px 4px 2px 5px; 
+	padding-left: 5px !important;*/ /* bug in articletools yahoo markup, span not closing. override for IE */
+	/*
+	text-decoration: none;
+	text-transform: uppercase;
+	*/
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { 
+	text-decoration: none;
+	/*border: 1px solid #990000;*/
+}
+
+/*-------------------------------------------*/
+/* Added from NYT - to mimic the NEXT PAGE link at bottom of multipage article */
+/* THESE WORK WELL! */
+#pageLinks {
+  margin-bottom: 2.1em;
+  text-align: right;
+  font-size: 11px;
+  font-family: arial, helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#pageLinks a.next,
+#pageLinks a.previous {
+  border: 1px solid #004276;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 4px 2px 5px; 
+  padding-left: 5px !important; /* bug in articletools yahoo markup, span not closing. override for IE */
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#pageLinks a.next:hover,
+#pageLinks a.previous:hover {
+  border: 1px solid #990000;
+}
+/*-------------------------------------------*/
+
+
+.container {
+	width: 960px;
+	background: #FFF;
+	margin: 0 auto; 
+}
+
+
+.content {
+
+	padding: 10px 0;
+}
+
+
+.fltrt {  
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { 
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat {
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+.header{
+height:100px;
+background-color:#3CF;
+line-height:100px;
+
+}
+
+.menu{
+	
+	padding-left:15px;
+height:40px;
+background-color:#FC0;
+line-height:40px;	
+}
+
+
+.menu ul.sf-menu{
+line-height:40px;	
+}
+
+
+.footer{
+	width:960px;
+	margin:0 auto;
+	text-align:right;
+	
+
+}
+
+.error{
+	margin:3px;
+color:#FFF	;
+background-color:#F00;
+border:#C00 1px solid;
+padding:5px;
+}
+
+
+.warning{
+	margin:3px;
+color:#F60;
+background-color:#FF9;
+border:#F90 1px solid;
+padding:5px;
+}
+
+
+.information{
+	margin:3px;
+color:#360;
+background-color:#9FF;
+border:#960 1px solid;
+padding:5px;
+}
+
+.clear{
+	clear:both;
+}
+
+.twocol{
+	margin:4px;
+	padding:5px;
+float:left;
+width:430px;
+border:1px solid #333;	
+}
+
+.threecol{
+	margin:4px;
+	padding:5px;
+float:left;
+width:280px;
+border:1px solid #333;		
+}
+
+.fourcol{
+	margin:4px;
+	padding:5px;
+	width:205px;
+float:left;
+border:1px solid #333;	
+	
+}
+
+
+
+.twothirds{
+	margin:4px;
+	padding:5px;
+	width:590px;
+float:left;
+border:1px solid #333;	
+	
+}
+
+.onethird{
+	margin:4px;
+	padding:5px;
+	width:290px;
+float:left;
+border:1px solid #333;	
+	
+}
+
+
+
+
+.indent{
+padding:20px;	
+}
+
+
+ ol{
+	 padding-left:40px;
+	list-style-position: inside;	
+}
+
+ ul{
+	 padding-left:40px;
+		list-style-position: inside;
+}
+
+
+
+.table-a{
+	font-size: 12px;
+	width: 90%;
+	margin: 0px auto;
+	border: solid 1px #dcdcdc;
+}	
+.table-a th{
+	background-color:#fff;
+	padding: 12px 0px;	
+	text-align:center;
+}
+.table-a td{
+	padding: 10px;
+	border-top: solid 1px #dcdcdc;
+}
+.table-a td img{
+	vertical-align: bottom;
+	width: 20px;
+	height: 20px
+}
+.table-a h3{
+	font-size: 16px;
+	color: #0d0d0d;
+	margin-bottom:2px;
+}
+.table-a tr.row2{
+	background-color:#f7f7f7;
+}
+.table-a .right{
+	border-left: solid 1px #dcdcdc;
+}
+.table-a tr.final{
+	background-color:#fff;
+}
+.table-a tr.final td{
+	padding:20px 0 0 0;
+}
+.table-a .left{
+	width: 25%;
+}
+
+
+
+form{
+padding-left:40px;	
+	
+}
+
+
+form label{
+font-size:14px;	
+display:block;
+margin-top:12px;
+}
+
+form input[type=text]{
+padding:5px;
+font-size:12px;
+width:300px;	
+
+}
+
+
+form input[type=password]{
+padding:5px;
+font-size:12px;
+width:300px;	
+
+}
+
+
+form input[type=checkbox]{
+padding:5px;
+font-size:12px;
+width:40px;	
+
+}
+
+.btn {
+	float: left;
+	clear: both;
+	background: url(../images/btn_left.png) no-repeat;
+	padding: 0 0 0 10px;
+	margin: 5px 0;
+}
+.btn a{
+	float: left;
+	height: 40px;
+	background: url(../images/btn_stretch.png) repeat-x left top;
+	line-height: 40px;
+	padding: 0 10px;
+	color: #fff;
+	font-size: 1em;
+	text-decoration: none;
+}
+.btn span {
+	background: url(../images/btn_right.png) no-repeat;
+	float: left;
+	width: 10px;
+	height: 40px;
+}
+.btn_submit { background-color:#79B6CE; }
+
+
+
+
+.greenform{
+	
+	
+background-color:#f5f5f5;	
+}
+
+.greenform p span{
+width:130px;
+float:left;
+display:inline;	
+line-height:40px;
+
+
+} 
+
+.greenform input[type=text]{
+width:140px;	
+}
+
+.greenform input[type=password]{
+width:140px;	
+}
+
+.greenform .heading{
+width:320px;
+text-align:center;
+font-weight:bold;
+}
+
+.greenform p{
+	
+clear:both;	
+float:none;
+}
+
+.greenform input[type=checkbox]{
+height:40px;	
+}
+
+
+.greenform p select{
+	border: solid 1px red; 
+	font-weight: bold;
+	height:20px;
+	width:100px;
+	margin-top:10px;
+}
+
+.greenform input[type=submit]{
+padding:6px;
+font-weight:bold;
+width:150px;	
+height:40px;
+background-color:#246378;
+color:#fff;
+font-size:16px;
+}
+
+.greenform input[type=radio]{
+margin-top:10px;	
+}
+
+.greenform  .mini{
+	width:70px;
+	font-size:12px;
+	float:right;
+}
+
+.greenform textarea{
+
+width:200px;
+height:60px;	
+}
+
+
+/******************/
+/*** Error text ***/
+/******************/
+/*
+label {
+  width: 150px;
+  font-size: 12pt;
+  text-align: right;
+  float: left;
+}
+*/
+
+.formerror {
+  border: 1px solid red;
+  background-color : #FFCCCC;
+  width: auto;
+  padding: 5px 0;
+}
+
+.errortext {
+  padding-left: 80px;
+  font: bold smaller sans-serif;
+}
